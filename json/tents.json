@@ -1,0 +1,16 @@
+[
+  {
+    "Id": "880RR",
+    "Name": "Marmot Ajax 3",
+    "Description": "Lightweight, durable tent for three people.",
+    "FinalPrice": 199.99,
+    "Image": "../images/marmot-ajax-3.jpg"
+  },
+  {
+    "Id": "770TT",
+    "Name": "REI Half Dome",
+    "Description": "Spacious two-person tent with easy setup.",
+    "FinalPrice": 179.99,
+    "Image": "../images/rei-half-dome.jpg"
+  }
+]
