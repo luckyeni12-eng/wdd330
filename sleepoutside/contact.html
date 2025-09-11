@@ -98,6 +98,13 @@
       background: #2980b9;
     }
 
+    #result {
+      margin-top: 1rem;
+      font-weight: bold;
+      color: #2c3e50;
+      text-align: center;
+    }
+
     footer {
       background: #2c3e50;
       color: #fff;
@@ -120,24 +127,44 @@
           <label for="name">Full Name</label>
           <input type="text" id="name" name="name" placeholder="Enter your full name" required />
         </div>
-
         <div>
           <label for="email">Email Address</label>
           <input type="email" id="email" name="email" placeholder="Enter your email" required />
         </div>
-
         <div>
           <label for="message">Message</label>
           <textarea id="message" name="message" rows="5" placeholder="Type your message here..." required></textarea>
         </div>
-
         <button type="submit">Send Message</button>
       </form>
+
+      <hr style="margin: 2rem 0;">
+
+      <h2>Quick Summation</h2>
+      <div>
+        <label for="num1">First Number</label>
+        <input type="number" id="num1" placeholder="Enter first number" />
+      </div>
+      <div>
+        <label for="num2">Second Number</label>
+        <input type="number" id="num2" placeholder="Enter second number" />
+      </div>
+      <button type="button" onclick="calculateSum()">Calculate Sum</button>
+      <p id="result"></p>
     </div>
   </main>
 
   <footer>
     <p>&copy; 2025 Sleep Outside Project. All rights reserved.</p>
   </footer>
+
+  <script>
+    function calculateSum() {
+      const num1 = parseFloat(document.getElementById('num1').value) || 0;
+      const num2 = parseFloat(document.getElementById('num2').value) || 0;
+      const sum = num1 + num2;
+      document.getElementById('result').textContent = "Result: " + sum;
+    }
+  </script>
 </body>
 </html>
