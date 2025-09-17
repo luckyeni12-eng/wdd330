@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ - Sleep Outside</title>
+  <!-- Corrected CSS path -->
+  <link rel="stylesheet" href="faq.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+      <a href="faq.html" class="active">FAQ</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="faq">
+      <h1>Frequently Asked Questions</h1>
+
+      <div class="faq-item">
+        <button class="faq-question">What is the Sleep Outside Project?</button>
+        <div class="faq-answer">
+          <p>We provide high-quality camping gear for outdoor enthusiasts and promote sustainable outdoor living.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">How do I track my order?</button>
+        <div class="faq-answer">
+          <p>You can track your order through the confirmation email or by logging into your account.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Do you offer returns?</button>
+        <div class="faq-answer">
+          <p>Yes, we accept returns within 30 days of purchase as long as the product is unused and in its original packaging.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Sleep Outside Project. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Simple toggle for FAQ accordion
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        btn.classList.toggle('active');
+        const answer = btn.nextElementSibling;
+        answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+      });
+    });
+  </script>
+</body>
+</html>
