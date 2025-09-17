@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Cart — Virtual Art Gallery</title>
+</head>
+<body>
+  <header id="site-header"></header>
+
+  <main class="container">
+    <div id="cart-root"></div>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script type="module">
+    import { loadHeaderFooter } from '../js/utils.mjs';
+    import { loadCart } from '../js/ShoppingCart.mjs';
+
+    // load header/footer
+    await loadHeaderFooter('../partials/');
+
+    // load & render cart area using the cart template
+    await loadCart('#cart-root', '../partials/cart-template.html');
+
+    // when cart updates in other pages we can listen
+    window.addEventListener('cart-updated', async () => {
+      await loadCart('#cart-root', '../partials/cart-template.html');
+      // also update header cart count directly
+      const raw = localStorage.getItem('cart');
+      const cart = raw ? JSON.parse(raw) : [];
+      const count = Array.isArray(cart) ? cart.reduce((acc, it) => acc + (it.quantity || 1), 0) : 0;
+      const el = document.getElementById('cart-count');
+      if (el) el.textContent = count;
+    });
+  </script>
+</body>
+</html>

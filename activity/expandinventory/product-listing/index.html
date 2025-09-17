@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Product Listing</title>
+<link rel="stylesheet" href="/css/product-listing.css" />
+</head>
+<body>
+<!-- header will be loaded dynamically by utils.loadHeaderFooter -->
+<div id="site-header-placeholder"></div>
+
+
+<main class="container">
+<section class="hero">
+<h1 class="page-title">Top Products</h1>
+</section>
+
+
+<section class="product-categories">
+<h2>Categories</h2>
+<div class="categories-grid">
+<a class="category-card" href="/product_listing/index.html?category=tents">
+<img src="/assets/icons/tents.svg" alt="Tents icon" />
+<span>Tents</span>
+</a>
+
+
+<a class="category-card" href="/product_listing/index.html?category=backpacks">
+<img src="/assets/icons/backpacks.svg" alt="Backpacks icon" />
+<span>Backpacks</span>
+</a>
+
+
+<a class="category-card" href="/product_listing/index.html?category=sleeping-bags">
+<img src="/assets/icons/sleeping-bags.svg" alt="Sleeping Bags icon" />
+<span>Sleeping Bags</span>
+</a>
+
+
+<a class="category-card" href="/product_listing/index.html?category=hammocks">
+<img src="/assets/icons/hammocks.svg" alt="Hammocks icon" />
+<span>Hammocks</span>
+</a>
+</div>
+</section>
+
+
+<section class="product-listing">
+<h2 id="listing-title">Top Products</h2>
+<div class="product-list"></div>
+</section>
+</main>
+
+
+<div id="site-footer-placeholder"></div>
+
+
+<script type="module" src="/js/product-listing.js"></script>
+</body>
+</html>
