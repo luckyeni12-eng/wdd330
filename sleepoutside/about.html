@@ -1,0 +1,108 @@
+<!-- File: about.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Us — Sleep Outside</title>
+  <link rel="stylesheet" href="css/about.css" />
+  <meta name="description" content="Sleep Outside — About us. Our mission, team, story and how we help outdoor lovers get the best gear." />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">Sleep Outside</a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-controls="navList">Menu</button>
+        <ul id="navList" class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="about.html" class="active">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <h1>About Sleep Outside</h1>
+        <p class="lead">We design lightweight, durable outdoor gear so people can spend more time in nature. Comfort, sustainability, and adventure are at the heart of what we do.</p>
+        <a class="btn-primary" href="#mission">Our Mission</a>
+      </div>
+    </section>
+
+    <section id="mission" class="container card mission">
+      <h2>Our Mission</h2>
+      <p>Sleep Outside exists to make outdoor sleeping accessible, comfortable, and sustainable. We combine thoughtful design, quality materials, and responsible manufacturing to deliver gear that lasts.</p>
+      <ul class="mission-points">
+        <li>Design with function and comfort in mind</li>
+        <li>Use responsible, long-lasting materials</li>
+        <li>Support outdoor education and local trails</li>
+      </ul>
+    </section>
+
+    <section class="container stats">
+      <div class="stat">
+        <strong>5</strong>
+        <span>Years building outdoor gear</span>
+      </div>
+      <div class="stat">
+        <strong>20+</strong>
+        <span>Products & accessories</span>
+      </div>
+      <div class="stat">
+        <strong>10k+</strong>
+        <span>Happy customers</span>
+      </div>
+    </section>
+
+    <section class="container team">
+      <h2>Meet the Team</h2>
+      <p class="muted">A small, multidisciplinary team with one big goal — get folks outside more comfortably.</p>
+
+      <div class="team-grid">
+        <article class="team-card">
+          <img src="images/team-anna.jpg" alt="Anna — Founder" class="avatar" />
+          <h3>Anna Gomez</h3>
+          <p class="role">Founder & Product Designer</p>
+          <p>Anna leads product design and ensures each prototype is tested in the field before launch.</p>
+        </article>
+
+        <article class="team-card">
+          <img src="images/team-omar.jpg" alt="Omar — Operations" class="avatar" />
+          <h3>Omar Ibe</h3>
+          <p class="role">Operations & Supply</p>
+          <p>Omar manages our supply chain and partner factories to keep quality high and waste low.</p>
+        </article>
+
+        <article class="team-card">
+          <img src="images/team-lucy.jpg" alt="Lucy — Marketing" class="avatar" />
+          <h3>Lucy Park</h3>
+          <p class="role">Community & Marketing</p>
+          <p>Lucy connects with our customers and spreads the word about sustainable outdoor living.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 Sleep Outside. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav toggle
+    const navToggle = document.getElementById("navToggle");
+    const navList = document.getElementById("navList");
+
+    navToggle.addEventListener("click", () => {
+      const expanded = navToggle.getAttribute("aria-expanded") === "true";
+      navToggle.setAttribute("aria-expanded", !expanded);
+      navList.style.display = navList.style.display === "flex" ? "none" : "flex";
+    });
+  </script>
+</body>
+</html>

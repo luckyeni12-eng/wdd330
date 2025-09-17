@@ -1,0 +1,181 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: #fafafa;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* Header */
+.site-header {
+  background: #2c3e50;
+  color: #fff;
+  padding: 1rem 0;
+}
+
+.site-header .logo {
+  font-size: 1.5rem;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-nav .nav-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav .nav-list li {
+  margin-left: 1.5rem;
+}
+
+.main-nav .nav-list a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.main-nav .nav-list a.active {
+  border-bottom: 2px solid #fff;
+}
+
+.nav-toggle {
+  display: none;
+}
+
+/* Hero Section */
+.hero {
+  background: url("../images/hero-bg.jpg") center/cover no-repeat;
+  color: #fff;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.hero .lead {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: #27ae60;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* Mission Section */
+.card {
+  background: #fff;
+  padding: 2rem;
+  margin: 2rem 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.mission-points {
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin-top: 1rem;
+}
+
+/* Stats Section */
+.stats {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  margin: 3rem 0;
+}
+
+.stats .stat strong {
+  display: block;
+  font-size: 2rem;
+  color: #27ae60;
+}
+
+/* Team Section */
+.team {
+  margin: 3rem 0;
+}
+
+.team-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.team-card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.team-card img.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.team-card .role {
+  font-weight: bold;
+  color: #555;
+  margin: 0.5rem 0;
+}
+
+.muted {
+  color: #777;
+  font-style: italic;
+}
+
+/* Footer */
+.site-footer {
+  background: #2c3e50;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .main-nav .nav-list {
+    display: none;
+    flex-direction: column;
+    background: #34495e;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    padding: 1rem;
+  }
+
+  .main-nav .nav-list li {
+    margin: 1rem 0;
+  }
+
+  .nav-toggle {
+    display: block;
+    background: none;
+    border: 2px solid #fff;
+    padding: 0.5rem 1rem;
+    color: #fff;
+    cursor: pointer;
+  }
+}
